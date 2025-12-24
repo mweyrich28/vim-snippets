@@ -1,0 +1,460 @@
+priority 11
+##########
+# GLOBAL #
+##########
+
+#########################
+# MATH & LaTeX SNIPPETS #
+#########################
+
+snippet uset "underset" w
+\underset{$1}{${VISUAL}}$0
+endsnippet
+
+snippet oset "overset" w
+\overset{$1}{${VISUAL}}$0
+endsnippet
+
+snippet beg "begin{} / end{}" bi
+\begin{$1}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet cnt "Center" bi
+\begin{center}
+	${0:${VISUAL}}
+\end{center}
+endsnippet
+
+snippet nn "cap" w
+\cap 
+endsnippet
+
+snippet uu "cup" w
+\cup 
+endsnippet
+
+snippet quu "square cup" i
+\sqcup
+endsnippet
+
+snippet qnn "square cup" i
+\sqcap
+endsnippet
+
+snippet ~ "wave" w
+\thicksim
+endsnippet
+
+snippet PO "Partielle Ordnung Zeichen" w
+\preceq
+endsnippet
+
+snippet set "\{\}" w
+\left\lbrace ${1:${VISUAL}} \right\lbrace$0
+endsnippet
+
+snippet == "align =" w
+&= $1 \\\
+$2
+endsnippet
+
+snippet high "Creates yellow text colorbox" w
+\colorbox{$1!40}{$2${VISUAL}}
+endsnippet
+
+snippet äqu "\equiv" w
+\equiv$0
+endsnippet
+
+snippet O "big O notation" w
+\mathcal{O}($1)
+endsnippet
+
+snippet tex "text field" w
+\text{$1${VISUAL}}$2
+endsnippet
+
+snippet box "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐  '`
+│ $1 │  
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘  '`
+$0
+endsnippet
+
+snippet bin "binomial" w
+\binom{$1}{$2}
+endsnippet
+
+snippet . "\cdot" w
+\cdot$0
+endsnippet
+
+snippet neg "negation" w
+\neg
+endsnippet
+
+snippet and "land" w
+\land
+endsnippet
+
+snippet or "lor" w
+\lor
+endsnippet
+
+snippet ccq "subseteq" w
+\subseteq
+endsnippet
+
+snippet nccq "subsetneq" w
+\subsetneq
+endsnippet
+
+snippet qccq "square subset" w
+\sqsubseteq
+endsnippet
+
+snippet qssq "square super set" w
+\sqsupseteq
+endsnippet
+
+
+snippet cc "subset" w
+\subset 
+endsnippet
+
+snippet inn "in " w
+\in 
+endsnippet
+
+snippet nin "notin" w
+\notin
+endsnippet
+
+snippet empty "emptyset"
+\emptyset
+endsnippet
+
+
+snippet smin "setminus"
+\setminus
+endsnippet
+
+snippet uuu "bigcup" w
+\bigcup_{${1:i} \in ${2: I}}$0
+endsnippet
+
+snippet nnn "bigcap" w
+\bigcap_{${1:i} \in ${2: I}}$0
+endsnippet
+
+snippet fa "for all" w
+\forall_{${1:x} \in ${2:A}}
+endsnippet
+
+snippet ex "exists" w
+\exists_{${1:x} \in ${2:A}}
+endsnippet
+
+snippet circ "\circ" w
+\circ 
+endsnippet
+
+snippet HH "H" wH
+\mathbb{H}
+endsnippet
+
+snippet KK "K" wA
+\mathbb{K}
+endsnippet
+
+snippet DD "D" wA
+\mathbb{D}
+endsnippet
+
+snippet QQ "Q" wA
+\mathbb{Q}
+endsnippet
+
+snippet NN "N" wA
+\mathbb{N}
+endsnippet
+
+snippet ZZ "Z" wA
+\mathbb{Z}
+endsnippet
+
+snippet CC "C" wA
+\mathbb{C}
+endsnippet
+  
+snippet RR "R" wA
+\mathbb{R}
+endsnippet
+
+snippet frac "Fraction" w
+\frac{$1}{$2}$0
+endsnippet
+
+snippet ss "Super Script" i
+^{$1}$0
+endsnippet
+
+snippet __ "subscript" iA
+_{$1}$0
+endsnippet
+
+snippet srt "Square Root" wi
+\sqrt{${1:${VISUAL}}}$0
+endsnippet
+
+snippet srto "... Root" wi
+\sqrt[$1]{${2:${VISUAL}}}$0
+endsnippet
+
+snippet pmat "Pmat" w
+\begin{pmatrix} $1 \end{pmatrix}$0
+endsnippet
+
+snippet bmat "Bmat" w
+\begin{bmatrix} $1 \end{bmatrix}$0
+endsnippet
+
+snippet conj "conjugate" w
+\overline{$1}$0
+endsnippet
+
+snippet sum "sum" w
+\sum_{$1}${2:^{$3}}$4
+endsnippet
+
+snippet lim "limit" w
+\lim _{${1:n} \to ${2:\infty}} 
+endsnippet
+
+snippet bop "big operator" w
+\operatornamewithlimits{${1:op}}_{${2:down}}^{${4:up}}$0
+endsnippet
+
+snippet limsup "limsup" w
+\limsup _{${1:n} \to ${2:\infty}} 
+endsnippet
+
+snippet prod "product" w
+\prod_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}}$0
+endsnippet
+
+snippet part "d/dx" w
+\frac{\partial ${1:V}}{\partial ${2:x}}$0
+endsnippet
+
+snippet oo "\infty" wA
+\infty
+endsnippet
+
+snippet rij "mrij" i
+(${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
+endsnippet
+
+snippet => "Implies" i
+\implies
+endsnippet
+
+snippet =< "Implied by" w
+\impliedby
+endsnippet
+
+snippet iff "iff" w
+\iff
+endsnippet
+
+snippet != "Not Equal" w
+\neq 
+endsnippet
+
+snippet <= "leq" w
+\le 
+endsnippet
+
+snippet >= "geq" w
+\ge 
+endsnippet
+
+snippet lll "l" Aw
+\ell
+endsnippet
+
+snippet xx "cross" Aw
+\times 
+endsnippet
+
+
+snippet mto "mapsto" w
+\mapsto 
+endsnippet
+
+snippet to "to" w
+\to$0
+endsnippet
+
+# snippet cases "create left brace" i
+# ${1:x = } \begin{cases} $2 \\\ $3 \end{cases}
+# endsnippet
+
+snippet case "cases" bi
+\begin{cases}
+	${0:${VISUAL}}
+\end{cases}
+endsnippet
+
+snippet ubrace "creates underbrace" i
+\underbrace{$1${VISUAL}}_{\text{$2}}
+$0
+endsnippet
+
+snippet obrace "creates overbrace" i
+\overbrace{$1${VISUAL}}^{\text{$2}}
+$0
+endsnippet
+
+snippet col "colored Text" w
+\color{$1} $2
+endsnippet
+
+##################
+# VIMWIKI SYNTAX #
+##################
+
+snippet mk "places $ $ for math syntax" wA
+$${1}$`p!
+if t[2] and t[2][0] not in [',', '.', '?', '-'. ' ']:
+snip.rv = ' '
+else:
+snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "math block" wA
+$$
+$0
+$$
+endsnippet
+
+snippet bf "bold text" w
+**$1${VISUAL}**$2
+endsnippet
+
+snippet it "italic text" w
+*$1${VISUAL}*$2
+endsnippet
+
+snippet cros "cross out text" w
+~~$1${VISUAL}~~$2
+endsnippet
+
+###########
+# BIOCHEM #
+###########
+snippet reac "Reaction Step" w
+>   ↓   
+>   ↓ ← \`${1:EXTRA REAGENT}\`   
+>   ↓ :o: **$2**    
+>   ↓ → \`${3:SIDE PRODUCT}\`    
+>   ↓    
+> \`${4:MAIN PRODUCT}\`  
+endsnippet
+
+snippet enz "Enzyme" w
+:o: **${1:ENZYME}**
+endsnippet
+
+###################
+# Text formatting #
+###################
+
+snippet /* "Comment"
+<!-- ${1:${VISUAL}} -->$0
+endsnippet
+
+################
+# Common stuff #
+################
+snippet ilc "Inline Code" iw
+\`${1:${VISUAL}}\`
+endsnippet
+
+snippet cbl "Codeblock" b
+\`\`\`$1
+${0:${VISUAL}}
+\`\`\`
+endsnippet
+
+snippet fnt "Footnote"
+[^${1:${VISUAL:Footnote}}]$0
+
+[^$1]:${2:Text}
+endsnippet
+
+snippet detail "Disclosure"
+<details${3: open=""}>
+  ${1:<summary>${2}</summary>}$0
+</details>
+endsnippet
+
+snippet head "Create header with tags and date" w
+# $1
+> **date:** `!v strftime("%Y-%m-%d")`  
+> **tags:**
+> **material:**
+$0
+endsnippet
+
+snippet note "note" w
+> [!NOTE]   
+> ${VISUAL}
+endsnippet
+
+snippet important "important" w
+> [!IMPORTANT]   
+> ${VISUAL}
+endsnippet
+
+snippet warn "warning" w
+> [!WARNING]   
+> ${VISUAL}
+endsnippet
+
+snippet summary "summary" w
+> [!SUMMARY]   
+> ${VISUAL}
+endsnippet
+
+snippet question "question" w
+> [!QUESTION]   
+> ${VISUAL}
+endsnippet
+
+snippet quote "quote" w
+> [!QUOTE]   
+> ${VISUAL}
+endsnippet
+
+snippet url "url" i
+[$1](${VISUAL})
+endsnippet
+
+snippet tlog "daily log" wi
+# `!v strftime("%Y-%m-%d")`  
+
+**Wake Up:**
+
+## Session 1:   8:00-11:00
+
+## Session 2:  12:00-15:00
+
+## Session 3:  16:00-19:00
+
+## End
+
+endsnippet
